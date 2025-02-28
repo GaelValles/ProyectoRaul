@@ -2,7 +2,7 @@ import {pool} from '../db.js';
 import {createAccessToken} from '../libs/jwt.js';
 import bcrypt from "bcryptjs";
 
-export const getProfesor = async(req,res) =>{
+export const getProfesores = async(req,res) =>{
     try {
         const {rows}= await pool.query('SELECT * FROM profesores ')
         console.log(rows)

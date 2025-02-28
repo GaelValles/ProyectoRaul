@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 CREATE TABLE alumnos (
     id_alumno SERIAL PRIMARY KEY,
     nombre_completo VARCHAR(255) NOT NULL,
@@ -24,26 +23,6 @@ CREATE TABLE profesores (
     status VARCHAR(20) NOT NULL DEFAULT 'profesor',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-=======
--- CREATE TABLE users(
---     userId SERIAL PRIMARY KEY,
---     nombre VARCHAR(100) NOT NULL,
---     email VARCHAR(100) NOT NULL UNIQUE,
---     contra TEXT NOT NULL,
---     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
--- );
-
--- CREATE TABLE carrito_compras (
---     id_carrito SERIAL PRIMARY KEY,
---     FKuserId INT NOT NULL,
---     id_producto INT NOT NULL,
---     cantidad INT NOT NULL DEFAULT 1,
---     agregado_en TIMESTAMP DEFAULT NOW(),
---     FOREIGN KEY (FKuserId) REFERENCES users(userId) ON DELETE CASCADE,
---     FOREIGN KEY (id_producto) REFERENCES productos(id_producto) ON DELETE CASCADE
--- );
->>>>>>> cf15d4c (Archivo alumnos y base de datos)
-
 CREATE TABLE admin (
     id_admin SERIAL PRIMARY KEY,
     nombre_completo VARCHAR(255) NOT NULL,
@@ -54,7 +33,6 @@ CREATE TABLE admin (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-<<<<<<< HEAD
 CREATE TABLE materias (
     id_materia SERIAL PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -76,15 +54,3 @@ CREATE TABLE asistencias (
     FOREIGN KEY (id_alumno) REFERENCES alumnos(id_alumno) ON DELETE CASCADE,
     FOREIGN KEY (id_materia) REFERENCES materias(id_materia) ON DELETE CASCADE
 );
-=======
-
--- CREATE TABLE productos (
---     id_producto SERIAL PRIMARY KEY, 
---     nombre VARCHAR(100) NOT NULL,
---     descripcion TEXT,
---     precio DECIMAL(10,2) NOT NULL,
---     stock INT NOT NULL DEFAULT 0,
---     categoria VARCHAR(50),
---     creado_en TIMESTAMP DEFAULT NOW()
--- );
->>>>>>> cf15d4c (Archivo alumnos y base de datos)
